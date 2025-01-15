@@ -102,5 +102,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:EmptyEer/EmptyEer.github.io.git
-  branch: main
+  repo: git@github.com:EmptyEer/emptyeer.github.io.git
+  branch: gh-pages
