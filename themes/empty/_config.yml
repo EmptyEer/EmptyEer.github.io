@@ -1,0 +1,17 @@
+nav:
+ -
+   icon: 'images/home.svg'
+   name: home
+   path: '/'
+ -
+   icon: 'images/tag.svg'
+   name: tags
+   path: '/tags'
+ -
+   icon: 'images/archives.svg'
+   name: archives
+   path: '/archives'
+ -
+   icon: 'images/about.svg'
+   name: about
+   path: '/about'

@@ -1,0 +1,11 @@
+<div class="empty-header">
+  <div class="empty-header-title"><%= config.title %></div>
+  <div class="empty-header-nav">
+    <% theme.nav.forEach((navItem) => { const {icon, name, path} = navItem %>
+      <div class="empty-header-nav-item">
+        <img class="empty-header-nav-item-icon" src="<%= url_for(icon) %>"/>
+        <a href="<%= path %>"><%= __(name) %></a>
+      </div>
+    <% }) %>
+  </div>
+</div>

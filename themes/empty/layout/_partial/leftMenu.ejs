@@ -1,0 +1,43 @@
+<div class="empty-left-container">
+  <div class="empty-author-info">
+    <img class="empty-author-img"/>
+    <div class="empty-author-name"><%= config.title %></div>
+  </div>
+  <% const categoriesMap=site.categories.data.reduce((pre,cur)=> {
+    const {parent} = cur
+    if(parent) {
+    if(pre[parent]) {
+    pre[parent].push(cur)
+    } else {
+    pre[parent] = [cur]
+    }
+    }
+    return pre
+    },{})
+    %>
+    <% function renderCategory(category) { const {name, _id} = category %>
+      <li class="empty-menu-list-item">
+        <div class="empty-item-name" onclick="clickListItem(this)">
+          <% if (categoriesMap[_id]) { %><i class="iconfont icon-right empty-item-icon" onclick="clickItemIcon(event, '<%= _id %>')"></i><% } %>
+          <div><%= name %></div>
+        </div>
+        <% if (categoriesMap[_id]) { %>
+          <ul id="<%= _id %>" class="empty-sub-menu-list">
+              <% categoriesMap[_id].forEach(function (child) { %>
+                  <%= renderCategory(child) %>
+              <% }) %>
+          </ul>
+      <% } %>
+      </li>
+    <% } %>
+    <ul class="empty-menu-list">
+      <li class="empty-menu-list-item">
+        <div class="empty-item-name" onclick="clickListItem(this)"><%= __('allArticles') %></div>
+      </li>
+      <% site.categories.data.forEach((category) => {
+        if(!category.parent) {
+          renderCategory(category)
+        }
+      }) %>
+    </ul>
+</div>
