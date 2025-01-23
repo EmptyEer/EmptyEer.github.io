@@ -18,7 +18,7 @@
     <% function renderCategory(category) { const {name, _id} = category %>
       <li class="empty-menu-list-item">
         <div class="empty-item-name" onclick="clickListItem(this)">
-          <% if (categoriesMap[_id]) { %><i class="iconfont icon-right empty-item-icon" onclick="clickItemIcon(event, '<%= _id %>')"></i><% } %>
+          <% if (categoriesMap[_id]) { %><i class="iconfont icon-right" onclick="clickItemIcon(event, '<%= _id %>', this)"></i><% } %>
           <div><%= name %></div>
         </div>
         <% if (categoriesMap[_id]) { %>

@@ -1,13 +1,22 @@
 @import './header.less';
 @import './leftMenu.less';
+@import './index.less';
+
+:root {
+  --font-primary-color: #36149d;
+  --box-shadow-color: #cecece;
+  --font-default-color: #696969;
+}
 
 html, body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color: #fbfaff;
+  color: var(--font-default-color);
+  a {
+    color: var(--font-default-color);
+  }
   .empty-body {
     display: flex;
-    padding-top: 46px;
   }
 }

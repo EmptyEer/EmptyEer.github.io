@@ -1,17 +1,17 @@
 nav:
  -
-   icon: 'images/home.svg'
+   iconClass: 'icon-home'
    name: home
    path: '/'
  -
-   icon: 'images/tag.svg'
+   iconClass: 'icon-tag'
    name: tags
    path: '/tags'
  -
-   icon: 'images/archives.svg'
+   iconClass: 'icon-if_archive_archives_'
    name: archives
    path: '/archives'
  -
-   icon: 'images/about.svg'
+   iconClass: 'icon-l-about'
    name: about
    path: '/about'

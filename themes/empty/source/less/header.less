@@ -6,10 +6,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0 0 12px 12px;
   background-color: #fff;
-  box-shadow: 0 10px 8px -10px #cecece;
-  position: fixed;
+  box-shadow: 0 10px 8px -10px var(--box-shadow-color);
+  position: relative;
+  z-index: 100px;
   .empty-header-title {
     font-size: 18px;
   }
@@ -20,6 +20,29 @@
       display: flex;
       align-items: center;
       margin-right: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        left: 50%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        border: 2px solid var(--font-primary-color);
+        border-radius: 2px;
+        opacity: 0;
+        transition: width .3s, opacity .3s;
+      }
+      &:hover {
+        color: var(--font-primary-color);
+        &::before {
+          opacity: 1;
+          width: 20px;
+        }
+        a {
+          color: var(--font-primary-color);
+        }
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -29,7 +52,6 @@
       }
       a {
         text-decoration: none;
-        color: #000;
       }
     }
   }

@@ -1,7 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-update: 
+update: {{ updated }}
 tags: draft
-published: false
 ---

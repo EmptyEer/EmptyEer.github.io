@@ -1,13 +1,14 @@
 .empty-left-container {
-  width: 270px;
-  padding: 20px;
+  width: 260px;
+  height: calc(100vh - 46px);
   background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 0 10px 1px #cecece;
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
   .empty-author-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+    border-bottom: 1px solid var(--box-shadow-color);
     .empty-author-img {
       width: 80px;
       height: 80px;
@@ -22,10 +23,7 @@
   .empty-menu-list {
     list-style-type: none;
     margin: 0;
-    padding: 10px 0;
-    background-color: #fbfaff;
-    border-radius: 16px;
-    box-shadow: inset 0 0 6px 1px #cecece;
+    padding: 20px;
     .empty-menu-list-item {
       display: flex;
       flex-direction: column;
@@ -33,27 +31,32 @@
         display: flex;
         align-items: center;
         padding: 5px 20px;
-        margin: 5px 0;
         position: relative;
         &::before {
           content: '';
           position: absolute;
-          top: 0;
+          top: 50%;
           left: 0;
-          height: 100%;
-          border: 2px solid #000;
+          transform: translateY(-50%);
+          border: 2px solid #696969;
+          border-radius: 2px;
+          height: 6px;
         }
         &:hover {
-          color: #7c5fbf;
+          color: var(--font-primary-color);
           &::before {
-            border-color: #7c5fbf;
+            border-color: var(--font-primary-color);
           }
         }
         &.empty-item-name-active {
-          color: #7c5fbf;
-          border-bottom: 2px solid #7c5fbf;
+          color: var(--font-primary-color);
+          font-weight: bold;
+          &::before {
+            border-color: var(--font-primary-color);
+          }
         }
-        .empty-item-icon {
+        .icon-right,
+        .icon-down {
           font-size: 14px;
           margin-right: 10px;
         }
@@ -63,8 +66,7 @@
         display: none;
         list-style-type: none;
         margin: 0;
-        padding: 10px 0;
-        background-color: #fbfaff;
+        padding: 0;
       }
     }
   }
