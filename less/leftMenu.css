@@ -1,0 +1,73 @@
+.empty-left-container {
+  min-width: 260px;
+  height: calc(100vh - 46px);
+  background-color: #fff;
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
+}
+.empty-left-container .empty-author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--box-shadow-color);
+}
+.empty-left-container .empty-author-info .empty-author-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: #cecece;
+  overflow: hidden;
+}
+.empty-left-container .empty-author-info .empty-author-name {
+  margin: 20px 0;
+}
+.empty-left-container .empty-menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item {
+  display: flex;
+  flex-direction: column;
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  position: relative;
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 2px solid #696969;
+  border-radius: 2px;
+  height: 6px;
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name:hover {
+  color: var(--font-primary-color);
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name:hover::before {
+  border-color: var(--font-primary-color);
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name.empty-item-name-active {
+  color: var(--font-primary-color);
+  font-weight: bold;
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name.empty-item-name-active::before {
+  border-color: var(--font-primary-color);
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name .icon-right,
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-item-name .icon-down {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.empty-left-container .empty-menu-list .empty-menu-list-item .empty-sub-menu-list {
+  width: 100%;
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
