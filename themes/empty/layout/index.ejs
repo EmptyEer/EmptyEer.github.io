@@ -1,9 +1,25 @@
 <div class="empty-content">
-  <div class="search-component">
+  <div class="empty-search-component">
     <i class="iconfont icon-search"></i>
-    <input id="search-input" autocomplete="off" placeholder="<%= __('Please input the name of the article.') %>"/>
+    <input id="search-input" autocomplete="off" placeholder="<%= __('Please input the name of the article.') %>" />
   </div>
-  <div class="article-list">
-
+  <div class="empty-article-list">
+    <% site.posts.forEach((post, i)=> { const { title, date, path, tags } = post %>
+      <a class="empty-article-item" href="<%= path %>">
+        <div class="empty-article-title">
+          <%= title %>
+        </div>
+        <div class="empty-article-tags">
+          <% tags.forEach((tag)=> { %>
+            <div class="empty-article-tag-item">
+              <%= tag.name %>
+            </div>
+            <% }) %>
+        </div>
+        <div class="empty-article-date">
+          <%= date.format('YYYY/MM/DD') %>
+        </div>
+      </a>
+      <% }) %>
   </div>
 </div>

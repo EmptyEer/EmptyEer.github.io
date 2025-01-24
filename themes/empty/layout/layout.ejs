@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
-<%- partial('_partial/head') %>
-<body>
-  <%- partial('_partial/header') %>
-  <div class="empty-body">
-    <%- partial('_partial/leftMenu') %>
-    <%- body %>
-  </div>
-</body>
+<%- fragment_cache('head', ()=> {
+  return partial('_partial/head')
+  }) %>
+
+  <body>
+    <%- fragment_cache('header', ()=> {
+      return partial('_partial/header')
+      }) %>
+      <div class="empty-body">
+        <%- fragment_cache('leftMenu', ()=> {
+          return partial('_partial/leftMenu')
+          }) %>
+          <div class="pjax">
+            <%- body %>
+          </div>
+      </div>
+      <%- js('js/index') %>
+  </body>
+
 </html>

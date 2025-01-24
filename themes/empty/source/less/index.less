@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .search-component {
+  .empty-search-component {
     user-select: none;
     border: 1px solid var(--box-shadow-color);
     border-radius: 12px;
@@ -22,6 +22,35 @@
     }
     &:focus-within {
       outline: 1px solid var(--font-primary-color);
+    }
+  }
+  .empty-article-list {
+    display: flex;
+    margin-top: 20px;
+    .empty-article-item {
+      text-decoration: none;
+      display: block;
+      width: 300px;
+      padding: 10px;
+      border: 1px solid var(--box-shadow-color);
+      border-radius: 12px;
+      box-shadow: 1px 1px 4px 1px var(--box-shadow-color);
+      .empty-article-title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .empty-article-tags {
+        display: flex;
+        font-size: 14px;
+        .empty-article-tag-item {
+          padding: 1px 10px;
+          border: 1px solid #000;
+          border-radius: 17px;
+        }
+      }
+      .empty-article-date {
+        text-align: right;
+      }
     }
   }
 }

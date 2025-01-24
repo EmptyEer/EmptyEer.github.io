@@ -1,3 +1,6 @@
-<div class="book-post">
-  <%- page.content %>
+<div class="empty-post">
+  <div class="empty-article-outline">
+    <%- toc(page.content, { list_number: false }) %>
+  </div>
+  <div class="empty-article-content"><%- page.content %></div>
 </div>

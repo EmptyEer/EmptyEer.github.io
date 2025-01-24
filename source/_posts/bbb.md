@@ -1,7 +1,6 @@
 ---
 title: bbb
 date: 2025-01-21 16:47:06
-update:
 categories:
 - [test1, test2, test9]
 - [test1, test6]
